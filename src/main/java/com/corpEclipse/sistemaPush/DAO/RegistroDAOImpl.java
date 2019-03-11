@@ -5,9 +5,6 @@
  */
 package com.corpEclipse.sistemaPush.DAO;
 
-//import static com.vlimix.ago.DAO.BusquedaDAOImpl.LOG;
-//import static com.vlimix.ago.DAO.ConsultaDAOImpl.LOG;
-
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.LogManager;

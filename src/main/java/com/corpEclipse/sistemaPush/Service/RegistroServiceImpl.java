@@ -5,7 +5,6 @@
  */
 package com.corpEclipse.sistemaPush.Service;
 
-//import com.vlimix.ago.DAO.ConsultaDAO;
 import com.corpEclipse.sistemaPush.DAO.RegistroDAO;
 
 import java.util.List;

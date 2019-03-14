@@ -81,4 +81,16 @@ public class TablasController extends AccessSystemController{
         return _modelandview;
     }
     
+    @RequestMapping(value = "/usuarios", method = {RequestMethod.POST, RequestMethod.GET})
+    public ModelAndView usuarios(HttpServletRequest request) {
+
+        System.out.println("usuarios");
+        _modelandview = new ModelAndView();
+        _modelandview.setViewName("tablas/usuarios");
+        _model = new HashMap<>();
+        _modelandview.addAllObjects(_model);
+
+        return _modelandview;
+    }
+    
 }

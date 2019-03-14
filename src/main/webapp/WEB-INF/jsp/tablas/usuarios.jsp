@@ -1,6 +1,6 @@
 <%-- 
-    Document   : visualizar
-    Created on : 4/03/2019, 04:16:14 PM
+    Document   : usuarios
+    Created on : 13/03/2019, 04:17:25 PM
     Author     : deivi
 --%>
 
@@ -88,13 +88,13 @@
             </a>
             <div class="collapse show" id="tablesExamples">
               <ul class="nav">
-                <li class="nav-item ">
+                <li class="nav-item active ">
                   <a class="nav-link" href="${pageContext.request.contextPath}/tablas/usuarios">
                     <i class="material-icons">face</i>
                     <span class="sidebar-normal"> Usuarios </span>
                   </a>
                 </li>
-                <li class="nav-item active ">
+                <li class="nav-item ">
                   <a class="nav-link" href="${pageContext.request.contextPath}/tablas/visualizar">
                     <i class="material-icons">visibility</i>
                     <span class="sidebar-normal"> Visualizar </span>
@@ -200,46 +200,44 @@
         </div>
       </nav>
       <!-- End Navbar -->
+
       <div class="content">
         <div class="container-fluid">
-          <div class="container-fluid">
-            <div class="row">
-              <!--<div class="col-md-12">-->
-                <div class="card">
-                  <div class="card-header card-header-primary card-header-icon">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary card-header-icon">
                     <div class="card-icon">
-                      <i class="material-icons">assignment</i>
+                      <i class="material-icons">face</i>
                     </div>
-                    <h4 class="card-title">Visualizar</h4>
+                    <h4 class="card-title">Usuarios</h4>
                   </div>
-                  <div class="card-body">
+                <div class="card-body">
+                  <div class="toolbar">
+                    <!--        Here you can write extra buttons/actions for the toolbar              -->
+                  </div>
+                  <div class="material-datatables">
+                    <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                      <thead>
+                        <tr>
+                          <th>Nombre</th>
+                          <th>Empresa</th>
+                          <th>Diagnóstico</th>
+                          <th>Acciones</th>
+                        </tr>
+                      </thead>
+                      <tfoot>
+                        <tr>
+                          <th>Nombre</th>
+                          <th>Empresa</th>
+                          <th>Diagnóstico</th>
+                          <th>Acciones</th>
+                        </tr>
+                      </tfoot>
+                      <tbody>
 
-                      <div class="toolbar">
-                        <!--        Here you can write extra buttons/actions for the toolbar              -->
-                        <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                          <option disabled selected>Usuarios</option>
-                          <option value="2">Todos</option>
-                          <option value="3">Juan</option>
-                          <option value="4">Carlos</option>
-                          <option value="5">Andrés</option>
-                        </select>
-                      </div>
+                        <tr>
 
-                      <div id="datatablestest" style="width: 900px;">
-                        <table id="example" class="table-condensed table-striped table-bordered  table-hover" cellspacing="0" style="width: 1200px!important;">
-                          <thead>
-                            <tr>
-                              <th style="display: none;">id</th>
-                              <th>Nombre</th>
-                              <th>Empresa</th>
-                              <th>Diagnostico</th>
-                              <th>Acciones</th>
-                            </tr>
-                          </thead>
-
-                         <tbody>
-                            <tr>
-                              <td style="display: none;">1</td>
                               <td>
                                 <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
                                   <option selected="true" value="1">Juan</option>
@@ -255,7 +253,6 @@
                               </td>
                             </tr>
                             <tr>
-                              <td style="display: none;">2</td>
                               <td>
                                 <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
                                   <option value="1">Juan</option>
@@ -271,7 +268,6 @@
                               </td>
                             </tr>
                             <tr>
-                              <td style="display: none;">3</td>
                               <td>
                                 <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
                                   <option value="1">Juan</option>
@@ -286,22 +282,19 @@
                                 <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
                               </td>
                             </tr>
-                            
-                            
-                          </tbody>
-                        </table>
-                      </div>
 
+                      </tbody>
+                    </table>
                   </div>
-                  <!-- end content-->
                 </div>
-                <!--  end card  -->
-              <!--</div>-->
-              <!-- end col-md-12 -->
+                <!-- end content-->
+              </div>
+              <!--  end card  -->
             </div>
-            <!-- end row -->
-
-            <div class="row">
+            <!-- end col-md-12 -->
+          </div>
+          <!-- end row -->
+          <div class="row">
               <div class="col-md-12">
                 <div class="card ">
                   <div class="card-header card-header-rose card-header-icon">
@@ -342,93 +335,9 @@
                 </div>
               </div>
             </div>
-
-
-            <div class="row">
-              <div class="col-md-12">
-                <form id="TypeValidation" class="form-horizontal" action="" method="">
-                  <div class="card ">
-                    <div class="card-header card-header-rose card-header-text">
-                      <div class="card-text">
-                        <h4 class="card-title">Individual</h4>
-                      </div>
-                    </div>
-                    <div class="card-body ">
-                      <div class="row">
-                        <div class="col-sm-5">
-                          <div class="form-group">
-                            <textarea class="form-control" id="texto" name="texto" placeholder="Texto" rows="4"></textarea>
-                          </div>
-                        </div>
-                        <label class="col-sm-2 col-form-label">Individual</label>
-                        <div class="col-sm-3">
-                          <div class="form-group">
-                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                              <option disabled selected> Seleccionar </option>
-                              <option value="1">Primera</option>
-                              <option value="2">Segunda</option>
-                              <option value="3">Tercera</option>
-                              <option value="4">Cuarta</option>
-                              <option value="5">Quinta</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="form-group">
-                            <button type="submit" class="btn btn-rose btn-round "> Enviar</button>
-                          </div>
-                        </div>
-                      </div><!-- end row -->
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div><!--end row-->
-
-
-            <div class="row">
-              <div class="col-md-12">
-                <form id="TypeValidation" class="form-horizontal" action="" method="">
-                  <div class="card ">
-                    <div class="card-header card-header-rose card-header-text">
-                      <div class="card-text">
-                        <h4 class="card-title">Grupo</h4>
-                      </div>
-                    </div>
-                    <div class="card-body ">
-                      <div class="row">
-                        <div class="col-sm-5">
-                          <div class="form-group">
-                            <textarea class="form-control" id="texto" name="texto" placeholder="Texto" rows="4"></textarea>
-                          </div>
-                        </div>
-                        <label class="col-sm-2 col-form-label">Grupo</label>
-                        <div class="col-sm-3">
-                          <div class="form-group">
-                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                              <option disabled selected> Seleccionar </option>
-                              <option value="1">Primero</option>
-                              <option value="2">Segundo</option>
-                              <option value="3">Tercero</option>
-                              <option value="4">Cuarto</option>
-                              <option value="5">Quinto</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="form-group">
-                            <button type="submit" class="btn btn-rose btn-round "> Enviar</button>
-                          </div>
-                        </div>
-                      </div><!-- end row -->
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div><!--end row-->
-          </div>
         </div>
       </div>
+
       <footer class="footer">
         <div class="container-fluid">
           <div class="copyright float-right">
@@ -668,12 +577,12 @@
             "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
           },
           "columns": [
-              { width: '150px'},
-              { width: '120px'},
-              { width: '130px'},
+              { width: '80px'},
               { width: '100px'},
-              { width: '90px'},
-              /*{ width: '120px'},
+              { width: '100px'},
+              { width: '80px'},
+              /*{ width: '90px'},
+              { width: '120px'},
               { width: '120px'},
               { width: '120px'},
               { width: '150px'},

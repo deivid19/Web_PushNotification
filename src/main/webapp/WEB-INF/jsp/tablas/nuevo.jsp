@@ -264,25 +264,31 @@
             <div class="collapse show" id="tablesExamples">
               <ul class="nav">
                 <li class="nav-item ">
-                  <a class="nav-link" href="visualizar.html">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/usuarios">
+                    <i class="material-icons">face</i>
+                    <span class="sidebar-normal"> Usuarios </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/visualizar">
                     <i class="material-icons">visibility</i>
                     <span class="sidebar-normal"> Visualizar </span>
                   </a>
                 </li>
                 <li class="nav-item active ">
-                  <a class="nav-link" href="nuevo.html">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/nuevo">
                     <i class="material-icons">insert_drive_file</i>
                     <span class="sidebar-normal"> Nuevo</span>
                   </a>
                 </li>
-                <li class="nav-item ">
-                  <a class="nav-link" href="modificar.html">
+                <!-- <li class="nav-item ">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/modificar">
                     <i class="material-icons">edit</i>
                     <span class="sidebar-normal"> Modificar </span>
                   </a>
-                </li>
+                </li> -->
                 <li class="nav-item ">
-                  <a class="nav-link" href="../login.html">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/login">
                     <i class="material-icons">person</i>
                     <span class="sidebar-normal"> Salir </span>
                   </a>

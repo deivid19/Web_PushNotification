@@ -101,8 +101,6 @@ public class AccessSystemController implements Serializable{
                 _urlsalida = "redirect:/errorlogin";
             }
             
-            //Usuario user = _accessystemservice.validaAcceso(usuario, password);
-            
         }
 
         return _urlsalida;

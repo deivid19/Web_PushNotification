@@ -1,4 +1,3 @@
-
 package com.corpEclipse.sistemaPush.Controller;
 
 import com.corpEclipse.sistemaPush.Model.Usuario;
@@ -25,35 +24,32 @@ import org.springframework.web.servlet.ModelAndView;
  * @author luisito
  */
 @Controller
-@Scope(value="session")
-public class AccessSystemController implements Serializable{
-    
-    
+@Scope(value = "session")
+public class AccessSystemController implements Serializable {
+
     @Autowired
     public AccessSystemService _accessystemservice;
 
     public ModelAndView _modelandview;
-    public Map<String, Object> _model; 
-    
-    
+    public Map<String, Object> _model;
+
     private static final Logger LOG = LogManager.getLogger(AccessSystemController.class.getName());
-    
-    
+
     @PostConstruct
-    public void init(){
-        LOG.debug("Crea instancia: "+AccessSystemController.class.getName());
+    public void init() {
+        LOG.debug("Crea instancia: " + AccessSystemController.class.getName());
     }
-    
+
     @PreDestroy
-    public void destroy(){
-        LOG.debug("Destruye instancia: "+AccessSystemController.class.getName());
+    public void destroy() {
+        LOG.debug("Destruye instancia: " + AccessSystemController.class.getName());
     }
-    
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String L1(HttpServletRequest request) {
         return "redirect:login";
     }
-    
+
     /*@RequestMapping(value = "/inicio", method = RequestMethod.GET)
     public ModelAndView inicio(HttpServletRequest request) {
         _modelandview = new ModelAndView();
@@ -61,23 +57,22 @@ public class AccessSystemController implements Serializable{
         return _modelandview;
         //return "redirect:index";
     }*/
-    
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public ModelAndView Logout(HttpServletRequest request) {
         _modelandview = new ModelAndView();
         _modelandview.setViewName("login");
         request.getSession().invalidate();
         return _modelandview;
-        
+
     }
-    
+
     // Redireccionar a login_usuario
     @RequestMapping(value = "/validaruser", method = RequestMethod.POST)
     // <editor-fold defaultstate="collapsed" desc="vista login">
     public String redirige(HttpServletRequest request) {
-        
+
         System.out.println("Peticion: /validaruser");
-        
+
         /*servicio de validacion*/
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
@@ -85,48 +80,67 @@ public class AccessSystemController implements Serializable{
 
         System.out.println("usuario: " + usuario);
         System.out.println("password: " + password);
-        
+
         String _urlsalida = "";
 
         if (usuario == null || usuario.equals("") || password.equals("")) {
 
             _urlsalida = "redirect:/errorlogin";
-            
-        } 
-        else {
-            if(usuario.equals("luis.cabrera@eclipsemex.com") && password.equals("luis")){
+
+        } else {
+            if (usuario.equals("luis.cabrera@eclipsemex.com") && password.equals("luis")) {
                 _urlsalida = "redirect:/tablas/visualizar";
-            }
-            else{
+            } else {
                 _urlsalida = "redirect:/errorlogin";
             }
-            
+
         }
 
+        /*else {
+            
+            Usuario user = _accessystemservice.validaAcceso(usuario, password);
+            
+            if( user != null){
+
+                request.getSession().setAttribute("nombre_usuario", user.getId_perfil() + " " + user.getNombre() + " " + user.getAp_pat());
+                request.getSession().setAttribute("email_usuario", user.getUsuario());
+                request.getSession().setAttribute("foto_usuario", user.getFoto());
+                
+                request.getSession().setAttribute("idusr", user.getId_usuario());
+                _urlsalida = "redirect:/tablas/visualizar";
+                
+            }
+            else{
+                
+                _urlsalida = "redirect:/errorlogin";
+                
+            }
+            
+        } */
         return _urlsalida;
     }
-    
+
     @RequestMapping(value = "/registro", method = RequestMethod.GET)
     public ModelAndView registro(HttpServletRequest request) {
         _modelandview = new ModelAndView();
         _modelandview.setViewName("registro");
         return _modelandview;
-        
+
     }
-    
+
     @RequestMapping(value = "/errorlogin", method = RequestMethod.GET)
     public ModelAndView errorlogin(HttpServletRequest request) {
         _modelandview = new ModelAndView();
         _modelandview.setViewName("errorPerfil");
         //request.getSession().invalidate();
         return _modelandview;
-        
+
     }
-     
+
     @RequestMapping(value = "/error404")
     // <editor-fold defaultstate="collapsed" desc="vista login">
     public String e404(HttpServletRequest request, Exception e) {
-        LOG.error("Error 404: " + e.getMessage(),e);
+        LOG.error("Error 404: " + e.getMessage(), e);
         return "redirect:/Error404";
     }
 
@@ -153,5 +167,5 @@ public class AccessSystemController implements Serializable{
         _modelandview.setViewName("error500");
         return _modelandview;
     }
-    
+
 }

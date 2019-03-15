@@ -3,7 +3,7 @@
 <hibernate-configuration>
   <session-factory>      
     <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-    <property name="hibernate.connection.url">jdbc:sqlserver://18.217.147.215:1433;databaseName=pruebas_db</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://18.217.147.215:1433;databaseName=CEOS</property>
     <property name="hibernate.connection.username">sa</property>
     <property name="hibernate.connection.password">C0m3x@2018</property>
     <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2008Dialect</property>

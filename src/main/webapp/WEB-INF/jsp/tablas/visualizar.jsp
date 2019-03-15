@@ -155,31 +155,6 @@
               </div>
             </form>
             <ul class="navbar-nav">
-              
-              <!--<li class="nav-item">
-                <a class="nav-link" href="#pablo">
-                  <i class="material-icons">dashboard</i>
-                  <p class="d-lg-none d-md-block">
-                    Stats
-                  </p>
-                </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="d-lg-none d-md-block">
-                    Some Actions
-                  </p>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="#">Mike John responded to your email</a>
-                  <a class="dropdown-item" href="#">You have 5 new tasks</a>
-                  <a class="dropdown-item" href="#">You're now friend with Andrew</a>
-                  <a class="dropdown-item" href="#">Another Notification</a>
-                  <a class="dropdown-item" href="#">Another One</a>
-                </div>
-              </li> -->
 
               <li class="nav-item dropdown">
                 <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -202,231 +177,204 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-          <div class="container-fluid">
-            <div class="row">
-              <!--<div class="col-md-12">-->
-                <div class="card">
-                  <div class="card-header card-header-primary card-header-icon">
-                    <div class="card-icon">
-                      <i class="material-icons">assignment</i>
-                    </div>
-                    <h4 class="card-title">Visualizar</h4>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">assignment</i>
                   </div>
-                  <div class="card-body">
-
-                      <div class="toolbar">
-                        <!--        Here you can write extra buttons/actions for the toolbar              -->
-                        <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                          <option disabled selected>Usuarios</option>
-                          <option value="2">Todos</option>
-                          <option value="3">Juan</option>
-                          <option value="4">Carlos</option>
-                          <option value="5">Andrés</option>
-                        </select>
-                      </div>
-
-                      <div id="datatablestest" style="width: 900px;">
-                        <table id="example" class="table-condensed table-striped table-bordered  table-hover" cellspacing="0" style="width: 1200px!important;">
-                          <thead>
-                            <tr>
-                              <th style="display: none;">id</th>
-                              <th>Nombre</th>
-                              <th>Empresa</th>
-                              <th>Diagnostico</th>
-                              <th>Acciones</th>
-                            </tr>
-                          </thead>
-
-                         <tbody>
-                            <tr>
-                              <td style="display: none;">1</td>
-                              <td>
-                                <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
-                                  <option selected="true" value="1">Juan</option>
-                                  <option value="2">Carlos</option>
-                                  <option value="3">Andrés</option>
-                                </select>
-                              </td>
-                              <td>Eclipse</td>
-                              <td>juan@eclipsemex.com</td>
-                              <td>
-                                <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
-                                <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="display: none;">2</td>
-                              <td>
-                                <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
-                                  <option value="1">Juan</option>
-                                  <option selected="true" value="2">Carlos</option>
-                                  <option value="3">Andrés</option>
-                                </select>
-                              </td>
-                              <td>Cisco</td>
-                              <td>carlos@cisco.com</td>
-                              <td>
-                                <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
-                                <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="display: none;">3</td>
-                              <td>
-                                <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
-                                  <option value="1">Juan</option>
-                                  <option value="2">Carlos</option>
-                                  <option selected="true" value="3">Andrés</option>
-                                </select>
-                              </td>
-                              <td>IBM</td>
-                              <td>andres@ibm.com</td>
-                              <td>
-                                <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
-                                <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
-                              </td>
-                            </tr>
-                            
-                            
-                          </tbody>
-                        </table>
-                      </div>
-
-                  </div>
-                  <!-- end content-->
+                  <h4 class="card-title">Visualizar</h4>
                 </div>
-                <!--  end card  -->
-              <!--</div>-->
-              <!-- end col-md-12 -->
-            </div>
-            <!-- end row -->
+                <div class="card-body">
 
-            <div class="row">
-              <div class="col-md-12">
+                    <div class="toolbar">
+                      <!--        Here you can write extra buttons/actions for the toolbar              -->
+                      <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
+                        <option disabled selected>Usuarios</option>
+                        <option value="2">Todos</option>
+                        <option value="3">Juan</option>
+                        <option value="4">Carlos</option>
+                        <option value="5">Andrés</option>
+                      </select>
+                    </div>
+
+                    <div class="material-datatables">
+                      <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Nombre Empresa</th>
+                            <th>Participante</th>
+                            <th>Celular</th>
+                            <th>Puesto</th>
+                            <th>Correo</th>
+                            <th>Diagnóstico</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr>
+                            <th>Nombre Empresa</th>
+                            <th>Participante</th>
+                            <th>Celular</th>
+                            <th>Puesto</th>
+                            <th>Correo</th>
+                            <th>Diagnóstico</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </tfoot>
+                        <tbody>
+                          <tr>
+                            <td>Eclipse</td>
+                            <td>
+                              <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
+                                <option selected="true" value="1">Juan</option>
+                                <option value="2">Carlos</option>
+                                <option value="3">Andrés</option>
+                              </select>
+                            </td>
+                            <td>0123456789</td>
+                            <td>Marketing</td>
+                            <td>juan@eclipsemex.com</td>
+                            <td>Bueno</td>
+                            <td>
+                              <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                              <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Cisco</td>
+                            <td>
+                              <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
+                                <option value="1">Juan</option>
+                                <option selected="true" value="2">Carlos</option>
+                                <option value="3">Andrés</option>
+                              </select>
+                            </td>
+                            <td>0123456789</td>
+                            <td>Ventas</td>
+                            <td>carlos@cisco.com</td>
+                            <td>Malo</td>
+                            <td>
+                              <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                              <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>IBM</td>
+                            <td>
+                              <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
+                                <option value="1">Juan</option>
+                                <option value="2">Carlos</option>
+                                <option selected="true" value="3">Andrés</option>
+                              </select>
+                            </td>
+                            <td>0123456789</td>
+                            <td>Operaciones</td>
+                            <td>andres@ibm.com</td>
+                            <td>Regular</td>
+                            <td>
+                              <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                              <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                            </td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                </div>
+                <!-- end content-->
+              </div>
+              <!--  end card  -->
+            </div>
+            <!-- end col-md-12 -->
+          </div>
+          <!-- end row -->
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <!--<form id="enviaIndividual" class="form-horizontal">-->
                 <div class="card ">
-                  <div class="card-header card-header-rose card-header-icon">
+                  <div class="card-header card-header-rose card-header-text">
                     <div class="card-text">
-                      <h4 class="card-title">Registro</h4>
+                      <h4 class="card-title">Individual</h4>
                     </div>
                   </div>
                   <div class="card-body ">
-                    <form method="#" action="#">
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="exampleEmail" class="bmd-label-floating">Nombre</label>
-                            <input type="text" class="form-control" id="exampleEmail">
-                          </div>
-                          <div class="form-group">
-                            <label for="examplePass" class="bmd-label-floating">Empresa</label>
-                            <input type="text" class="form-control" id="examplePass">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label for="exampleEmail" class="bmd-label-floating">Correo</label>
-                            <input type="text" class="form-control" id="exampleEmail">
-                          </div>
-                          <div class="form-group">
-                            <label for="examplePass" class="bmd-label-floating">Contraseña</label>
-                            <input type="text" class="form-control" id="examplePass">
-                          </div>
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <div class="form-group">
+                          <textarea class="form-control" id="valTexto" name="valTexto" placeholder="Texto" rows="4"></textarea>
                         </div>
                       </div>
-                      
-                    </form>
-                  </div>
-                  <div class="card-footer ">
-                    <button type="submit" class="btn btn-fill btn-rose">Registrar</button>
+                      <label class="col-sm-2 col-form-label">Individual</label>
+                      <div class="col-sm-3">
+                        <div class="form-group">
+                          <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select" id="valIndividual" name="valIndividual">
+                            <option disabled selected> Seleccionar </option>
+                            <option value="1">Primera</option>
+                            <option value="2">Segunda</option>
+                            <option value="3">Tercera</option>
+                            <option value="4">Cuarta</option>
+                            <option value="5">Quinta</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="form-group">
+                          <button onclick="botonIndividual();" class="btn btn-rose btn-round "> Enviar</button>
+                        </div>
+                      </div>
+                    </div><!-- end row -->
                   </div>
                 </div>
-              </div>
+              <!--</form>-->
             </div>
+          </div><!--end row-->
 
 
-            <div class="row">
-              <div class="col-md-12">
-                <form id="TypeValidation" class="form-horizontal" action="" method="">
-                  <div class="card ">
-                    <div class="card-header card-header-rose card-header-text">
-                      <div class="card-text">
-                        <h4 class="card-title">Individual</h4>
-                      </div>
-                    </div>
-                    <div class="card-body ">
-                      <div class="row">
-                        <div class="col-sm-5">
-                          <div class="form-group">
-                            <textarea class="form-control" id="texto" name="texto" placeholder="Texto" rows="4"></textarea>
-                          </div>
-                        </div>
-                        <label class="col-sm-2 col-form-label">Individual</label>
-                        <div class="col-sm-3">
-                          <div class="form-group">
-                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                              <option disabled selected> Seleccionar </option>
-                              <option value="1">Primera</option>
-                              <option value="2">Segunda</option>
-                              <option value="3">Tercera</option>
-                              <option value="4">Cuarta</option>
-                              <option value="5">Quinta</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="form-group">
-                            <button type="submit" class="btn btn-rose btn-round "> Enviar</button>
-                          </div>
-                        </div>
-                      </div><!-- end row -->
+          <div class="row">
+            <div class="col-md-12">
+              <!--<form id="enviaGrupo" class="form-horizontal">-->
+                <div class="card ">
+                  <div class="card-header card-header-rose card-header-text">
+                    <div class="card-text">
+                      <h4 class="card-title">Grupo</h4>
                     </div>
                   </div>
-                </form>
-              </div>
-            </div><!--end row-->
-
-
-            <div class="row">
-              <div class="col-md-12">
-                <form id="TypeValidation" class="form-horizontal" action="" method="">
-                  <div class="card ">
-                    <div class="card-header card-header-rose card-header-text">
-                      <div class="card-text">
-                        <h4 class="card-title">Grupo</h4>
+                  <div class="card-body ">
+                    <div class="row">
+                      <div class="col-sm-5">
+                        <div class="form-group">
+                          <textarea class="form-control" id="valTexto2" name="valTexto2" placeholder="Texto" rows="4"></textarea>
+                        </div>
                       </div>
-                    </div>
-                    <div class="card-body ">
-                      <div class="row">
-                        <div class="col-sm-5">
-                          <div class="form-group">
-                            <textarea class="form-control" id="texto" name="texto" placeholder="Texto" rows="4"></textarea>
-                          </div>
+                      <label class="col-sm-2 col-form-label">Grupo</label>
+                      <div class="col-sm-3">
+                        <div class="form-group">
+                          <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select"  id="valGrupo" name="valGrupo">
+                            <option disabled selected> Seleccionar </option>
+                            <option value="1">Primero</option>
+                            <option value="2">Segundo</option>
+                            <option value="3">Tercero</option>
+                            <option value="4">Cuarto</option>
+                            <option value="5">Quinto</option>
+                          </select>
                         </div>
-                        <label class="col-sm-2 col-form-label">Grupo</label>
-                        <div class="col-sm-3">
-                          <div class="form-group">
-                            <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                              <option disabled selected> Seleccionar </option>
-                              <option value="1">Primero</option>
-                              <option value="2">Segundo</option>
-                              <option value="3">Tercero</option>
-                              <option value="4">Cuarto</option>
-                              <option value="5">Quinto</option>
-                            </select>
-                          </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <div class="form-group">
+                          <button onclick="botonGrupo();" class="btn btn-rose btn-round "> Enviar</button>
                         </div>
-                        <div class="col-sm-2">
-                          <div class="form-group">
-                            <button type="submit" class="btn btn-rose btn-round "> Enviar</button>
-                          </div>
-                        </div>
-                      </div><!-- end row -->
-                    </div>
+                      </div>
+                    </div><!-- end row -->
                   </div>
-                </form>
-              </div>
-            </div><!--end row-->
-          </div>
+                </div>
+              <!--</form>-->
+            </div>
+          </div><!--end row-->
         </div>
       </div>
       <footer class="footer">
@@ -469,16 +417,20 @@
   <!--<script src="../../assets/js/plugins/jasny-bootstrap.min.js"></script>-->
   <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
   <script src="../complementos/assets/js/plugins/fullcalendar.min.js"></script>
+
   <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
-  <script src="../complementos/assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--<script src="../complementos/assets/js/plugins/jquery-jvectormap.js"></script> -->
+  
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="../complementos/assets/js/plugins/nouislider.min.js"></script>
   <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
   <!-- Library for adding dinamically elements -->
   <script src="../complementos/assets/js/plugins/arrive.min.js"></script>
+  
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+  
   <!-- Chartist JS -->
   <script src="../complementos/assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -491,6 +443,20 @@
   <script>
     $(document).ready(function() {
       $().ready(function() {
+
+        $('#datatables').DataTable({
+          "pagingType": "full_numbers",
+          "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, " todos"]
+          ],
+          responsive: true,
+          language: {
+            search: "_INPUT_",
+            searchPlaceholder: "Buscar...",
+          }
+        });
+
         $sidebar = $('.sidebar');
 
         $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -659,10 +625,56 @@
       });
     });
   </script>
+
   <script>
+
+    function botonIndividual(){
+
+      var texto = document.getElementById('valTexto').value;
+      var grupo = document.getElementById('valIndividual').value;
+      var datosInd = JSON.stringify({ texto: texto, grupo: grupo });
+      console.log("Datos individuales: " + datosInd);
+      
+      /*$.ajax({
+        type: "POST",
+        url: "serverUrl",
+        data: datosInd,
+        success: function(){},
+        dataType: "json",
+        contentType : "application/json"
+      });*/
+
+      //var datosInd = JSON.stringify($("#enviaIndividual").serializeArray());
+      //console.log("Json: " + datosInd)
+
+    }
+
+    function botonGrupo(){
+
+      var texto = document.getElementById('valTexto2').value;
+      var grupo = document.getElementById('valGrupo').value;
+      var datosGrupo = JSON.stringify({ texto: texto, grupo: grupo });
+      console.log("Datos grupo: " + datosGrupo);
+
+      /*$.ajax({
+        type: "POST",
+        url: "serverUrl",
+        data: datosGrupo,
+        success: function(){},
+        dataType: "json",
+        contentType : "application/json"
+      });*/
+
+      //var datosInd = JSON.stringify($("#enviaIndividual").serializeArray());
+      //console.log("Json: " + datosInd)
+    }
+
+  </script>
+
+  <!--script>
     $(document).ready(function() {
 
-        var table = $('#example').DataTable({
+        /*var table = $('#example').DataTable({
           //"autoWidth" : false,
           "language": {
             "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
@@ -673,12 +685,6 @@
               { width: '130px'},
               { width: '100px'},
               { width: '90px'},
-              /*{ width: '120px'},
-              { width: '120px'},
-              { width: '120px'},
-              { width: '150px'},
-              { width: '80px'},
-              { width: '100px'},*/
           ],
           "paging": false,
           "scrollY": 400,
@@ -687,7 +693,7 @@
                     [0, 'asc']
           ]
 
-        });
+        }); */
 
       var table = $('#datatable').DataTable();
 
@@ -714,7 +720,7 @@
 
     demo.showSwal();
    
-  </script>
+  </script-->
 </body>
 
 </html>

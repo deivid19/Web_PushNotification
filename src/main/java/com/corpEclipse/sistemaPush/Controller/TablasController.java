@@ -6,7 +6,9 @@
 package com.corpEclipse.sistemaPush.Controller;
 
 import com.corpEclipse.sistemaPush.Service.TablasService;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -76,6 +78,7 @@ public class TablasController extends AccessSystemController{
         _modelandview = new ModelAndView();
         _modelandview.setViewName("tablas/modificar");
         _model = new HashMap<>();
+        
         _modelandview.addAllObjects(_model);
 
         return _modelandview;
@@ -88,9 +91,41 @@ public class TablasController extends AccessSystemController{
         _modelandview = new ModelAndView();
         _modelandview.setViewName("tablas/usuarios");
         _model = new HashMap<>();
+        
+        try {
+                List<Object[]> list_usr = new ArrayList();
+                list_usr = tablasService.getListaUsuarios();
+                _model.put("listaUsuarios", list_usr);
+            } catch (Exception e) {
+                LOG.error("Algo fue mal con el servicio getListaUsuarios" + e);
+            }
+        
         _modelandview.addAllObjects(_model);
 
         return _modelandview;
+    }
+    
+    @RequestMapping(value = {"/nuevoRegistro"}, method = {org.springframework.web.bind.annotation.RequestMethod.GET, org.springframework.web.bind.annotation.RequestMethod.POST})
+    public String nuevoRegistro(HttpServletRequest request) {
+        String nombre = request.getParameter("nombre");
+        String celular = request.getParameter("celular");
+        String puesto = request.getParameter("puesto");
+        String correo = request.getParameter("correo");
+
+        String consulta = null;
+        String _urlsalida = null;
+        try {
+            consulta = tablasService.insertarRegistro(nombre, celular, puesto, correo);
+        } catch (Exception e) {
+            LOG.error("Algo fue mal con insertarRegistro " + e);
+        }
+        if (consulta.equals("1")) {
+
+            _urlsalida = "redirect:/tablas/usuarios";
+        }
+
+        System.out.println("consulta: " + consulta);
+        return _urlsalida;
     }
     
 }

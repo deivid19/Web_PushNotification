@@ -5,10 +5,18 @@
  */
 package com.corpEclipse.sistemaPush.DAO;
 
+import java.util.List;
+
 /**
  *
  * @author deivi
  */
 public interface TablasDAO {
+    
+    // Obtiene la lista de conceptos
+    public  List<Object[]>  getListaUsuarios();
+    
+    // Agregar nuevo concepto
+    public  String  insertarRegistro(String nombre, String celular, String puesto, String correo);
     
 }

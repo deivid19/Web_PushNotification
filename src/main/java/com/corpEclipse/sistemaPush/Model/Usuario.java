@@ -58,10 +58,6 @@ public class Usuario {
         this.password = password;
     }
     
-    
-    
-    
-    
 
     public int getId_usuario() {
         return id_usuario;

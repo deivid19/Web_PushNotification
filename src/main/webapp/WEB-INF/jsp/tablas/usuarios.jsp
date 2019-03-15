@@ -220,68 +220,81 @@
                     <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                       <thead>
                         <tr>
-                          <th>Nombre</th>
-                          <th>Empresa</th>
+                          <th>Nombre Empresa</th>
+                          <th>Participante</th>
+                          <th>Celular</th>
+                          <th>Puesto</th>
+                          <th>Correo</th>
                           <th>Diagnóstico</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
                       <tfoot>
                         <tr>
-                          <th>Nombre</th>
-                          <th>Empresa</th>
+                          <th>Nombre Empresa</th>
+                          <th>Participante</th>
+                          <th>Celular</th>
+                          <th>Puesto</th>
+                          <th>Correo</th>
                           <th>Diagnóstico</th>
                           <th>Acciones</th>
                         </tr>
                       </tfoot>
                       <tbody>
-
                         <tr>
-
-                              <td>
-                                <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
-                                  <option selected="true" value="1">Juan</option>
-                                  <option value="2">Carlos</option>
-                                  <option value="3">Andrés</option>
-                                </select>
-                              </td>
-                              <td>Eclipse</td>
-                              <td>juan@eclipsemex.com</td>
-                              <td>
-                                <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
-                                <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
-                                  <option value="1">Juan</option>
-                                  <option selected="true" value="2">Carlos</option>
-                                  <option value="3">Andrés</option>
-                                </select>
-                              </td>
-                              <td>Cisco</td>
-                              <td>carlos@cisco.com</td>
-                              <td>
-                                <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
-                                <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
-                                  <option value="1">Juan</option>
-                                  <option value="2">Carlos</option>
-                                  <option selected="true" value="3">Andrés</option>
-                                </select>
-                              </td>
-                              <td>IBM</td>
-                              <td>andres@ibm.com</td>
-                              <td>
-                                <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
-                                <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
-                              </td>
-                            </tr>
+                          <td>Eclipse</td>
+                          <td>
+                            <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
+                              <option selected="true" value="1">Juan</option>
+                              <option value="2">Carlos</option>
+                              <option value="3">Andrés</option>
+                            </select>
+                          </td>
+                          <td>0123456789</td>
+                          <td>Marketing</td>
+                          <td>juan@eclipsemex.com</td>
+                          <td>Bueno</td>
+                          <td>
+                            <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                            <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Cisco</td>
+                          <td>
+                            <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
+                              <option value="1">Juan</option>
+                              <option selected="true" value="2">Carlos</option>
+                              <option value="3">Andrés</option>
+                            </select>
+                          </td>
+                          <td>0123456789</td>
+                          <td>Ventas</td>
+                          <td>carlos@cisco.com</td>
+                          <td>Malo</td>
+                          <td>
+                            <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                            <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>IBM</td>
+                          <td>
+                            <select id="nombre" name="nombre" class="selectpicker" data-style="select-with-transition" multiple title="Nombre" data-size="7">
+                              <option value="1">Juan</option>
+                              <option value="2">Carlos</option>
+                              <option selected="true" value="3">Andrés</option>
+                            </select>
+                          </td>
+                          <td>0123456789</td>
+                          <td>Operaciones</td>
+                          <td>andres@ibm.com</td>
+                          <td>Regular</td>
+                          <td>
+                            <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                            <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                          </td>
+                        </tr>
 
                       </tbody>
                     </table>
@@ -303,26 +316,26 @@
                     </div>
                   </div>
                   <div class="card-body ">
-                    <form method="#" action="#">
+                    <form method="POST" action="nuevoRegistro">
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
                             <label for="exampleEmail" class="bmd-label-floating">Nombre</label>
-                            <input type="text" class="form-control" id="exampleEmail">
+                            <input id="nombre" name="nombre" type="text" class="form-control">
                           </div>
                           <div class="form-group">
-                            <label for="examplePass" class="bmd-label-floating">Empresa</label>
-                            <input type="text" class="form-control" id="examplePass">
+                            <label for="examplePass" class="bmd-label-floating">Puesto</label>
+                            <input id="puesto" name="puesto" type="text" class="form-control">
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="exampleEmail" class="bmd-label-floating">Correo</label>
-                            <input type="text" class="form-control" id="exampleEmail">
+                            <label for="exampleEmail" class="bmd-label-floating">Celular</label>
+                            <input id="celular" name="celular" type="text" class="form-control">
                           </div>
                           <div class="form-group">
-                            <label for="examplePass" class="bmd-label-floating">Contraseña</label>
-                            <input type="text" class="form-control" id="examplePass">
+                            <label for="examplePass" class="bmd-label-floating">Correo</label>
+                            <input id="correo" name="correo" type="text" class="form-control">
                           </div>
                         </div>
                       </div>
@@ -378,16 +391,20 @@
   <!--<script src="../../assets/js/plugins/jasny-bootstrap.min.js"></script>-->
   <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
   <script src="../complementos/assets/js/plugins/fullcalendar.min.js"></script>
+
   <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
-  <script src="../complementos/assets/js/plugins/jquery-jvectormap.js"></script>
+  <!-- <script src="../complementos/assets/js/plugins/jquery-jvectormap.js"></script> -->
+
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="../complementos/assets/js/plugins/nouislider.min.js"></script>
   <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
   <!-- Library for adding dinamically elements -->
   <script src="../complementos/assets/js/plugins/arrive.min.js"></script>
+  
   <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
+  
   <!-- Chartist JS -->
   <script src="../complementos/assets/js/plugins/chartist.min.js"></script>
   <!--  Notifications Plugin    -->
@@ -400,6 +417,20 @@
   <script>
     $(document).ready(function() {
       $().ready(function() {
+
+        $('#datatables').DataTable({
+          "pagingType": "full_numbers",
+          "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, " todos"]
+          ],
+          responsive: true,
+          language: {
+            search: "_INPUT_",
+            searchPlaceholder: "Buscar...",
+          }
+        });
+
         $sidebar = $('.sidebar');
 
         $sidebar_img_container = $sidebar.find('.sidebar-background');
@@ -568,10 +599,11 @@
       });
     });
   </script>
-  <script>
+
+  <!--script>
     $(document).ready(function() {
 
-        var table = $('#example').DataTable({
+        /*var table = $('#example').DataTable({
           //"autoWidth" : false,
           "language": {
             "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
@@ -581,13 +613,6 @@
               { width: '100px'},
               { width: '100px'},
               { width: '80px'},
-              /*{ width: '90px'},
-              { width: '120px'},
-              { width: '120px'},
-              { width: '120px'},
-              { width: '150px'},
-              { width: '80px'},
-              { width: '100px'},*/
           ],
           "paging": false,
           "scrollY": 400,
@@ -596,7 +621,7 @@
                     [0, 'asc']
           ]
 
-        });
+        });*/
 
       var table = $('#datatable').DataTable();
 
@@ -623,7 +648,7 @@
 
     demo.showSwal();
    
-  </script>
+  </script-->
 </body>
 
 </html>

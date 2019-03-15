@@ -54,6 +54,16 @@ public class TablasController extends AccessSystemController{
         _modelandview = new ModelAndView();
         _modelandview.setViewName("tablas/visualizar");
         _model = new HashMap<>();
+        
+        try {
+                List<Object[]> list_usr = new ArrayList();
+                list_usr = tablasService.getListaUsuarios();
+                System.out.println("lista: " + list_usr);
+                _model.put("listaUsuarios", list_usr);
+            } catch (Exception e) {
+                LOG.error("Algo fue mal con el servicio getListaUsuarios" + e);
+            }
+        
         _modelandview.addAllObjects(_model);
 
         return _modelandview;
@@ -91,14 +101,6 @@ public class TablasController extends AccessSystemController{
         _modelandview = new ModelAndView();
         _modelandview.setViewName("tablas/usuarios");
         _model = new HashMap<>();
-        
-        try {
-                List<Object[]> list_usr = new ArrayList();
-                list_usr = tablasService.getListaUsuarios();
-                _model.put("listaUsuarios", list_usr);
-            } catch (Exception e) {
-                LOG.error("Algo fue mal con el servicio getListaUsuarios" + e);
-            }
         
         _modelandview.addAllObjects(_model);
 

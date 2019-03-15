@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
-@Table(name="usuarios")
+@Table(name="Usuarios")
 public class Usuario {
     
     @Id
@@ -37,6 +37,9 @@ public class Usuario {
     @Column(name="activo")
     private boolean activo;
     
+    @Column(name="isAct")
+    private boolean isAct;
+    
     @Column(name="usuario")
     private String usuario;
     
@@ -46,7 +49,7 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id_usuario, String nombre, String ap_pat, String ap_mat, String foto, int id_perfil, boolean activo, String usuario, String password) {
+    /*public Usuario(int id_usuario, String nombre, String ap_pat, String ap_mat, String foto, int id_perfil, boolean activo, String usuario, String password) {
         this.id_usuario = id_usuario;
         this.nombre = nombre;
         this.ap_pat = ap_pat;
@@ -55,6 +58,13 @@ public class Usuario {
         this.id_perfil = id_perfil;
         this.activo = activo;
         this.usuario = usuario;
+        this.password = password;
+    }*/
+    
+    public Usuario(int id_usuario, String usuario, boolean isAct, String password) {
+        this.id_usuario = id_usuario;
+        this.usuario = usuario;
+        this.isAct = isAct;
         this.password = password;
     }
     
@@ -113,6 +123,14 @@ public class Usuario {
 
     public void setActivo(boolean activo) {
         this.activo = activo;
+    }
+    
+    public boolean isAct() {
+        return isAct;
+    }
+
+    public void setAct(boolean isAct) {
+        this.isAct = isAct;
     }
 
     public String getUsuario() {

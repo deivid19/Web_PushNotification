@@ -83,7 +83,7 @@ public class AccessSystemController implements Serializable {
 
         String _urlsalida = "";
 
-        if (usuario == null || usuario.equals("") || password.equals("")) {
+        /*if (usuario == null || usuario.equals("") || password.equals("")) {
 
             _urlsalida = "redirect:/errorlogin";
 
@@ -94,17 +94,22 @@ public class AccessSystemController implements Serializable {
                 _urlsalida = "redirect:/errorlogin";
             }
 
+        }*/
+        
+        if (usuario == null || usuario.equals("") || password.equals("")) {
+
+            //_urlsalida = "redirect:errorlogin.jsp";
+                _urlsalida = "redirect:/errorlogin";
+            
         }
 
-        /*else {
+        else {
             
             Usuario user = _accessystemservice.validaAcceso(usuario, password);
-            
+            System.out.println("user: " + user);
             if( user != null){
 
-                request.getSession().setAttribute("nombre_usuario", user.getId_perfil() + " " + user.getNombre() + " " + user.getAp_pat());
-                request.getSession().setAttribute("email_usuario", user.getUsuario());
-                request.getSession().setAttribute("foto_usuario", user.getFoto());
+                request.getSession().setAttribute("usuario", user.getUsuario());
                 
                 request.getSession().setAttribute("idusr", user.getId_usuario());
                 _urlsalida = "redirect:/tablas/visualizar";
@@ -116,7 +121,7 @@ public class AccessSystemController implements Serializable {
                 
             }
             
-        } */
+        }
         return _urlsalida;
     }
 

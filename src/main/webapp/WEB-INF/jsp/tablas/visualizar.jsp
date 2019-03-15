@@ -190,16 +190,20 @@
 
                     <div class="toolbar">
                       <!--        Here you can write extra buttons/actions for the toolbar              -->
-                      <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-                        <option disabled selected>Usuarios</option>
-                        <option value="2">Todos</option>
-                        <option value="3">Juan</option>
-                        <option value="4">Carlos</option>
-                        <option value="5">Andrés</option>
-                      </select>
+                      <div class="row">
+                        <div class="col-md-3">
+                          <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
+                            <option disabled selected>Usuarios</option>
+                            <option value="2">Todos</option>
+                            <option value="3">Juan</option>
+                            <option value="4">Carlos</option>
+                            <option value="5">Andrés</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
 
-                    <div class="material-datatables">
+                    <!--<div class="material-datatables">
                       <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                         <thead>
                           <tr>
@@ -236,7 +240,12 @@
                             <td>0123456789</td>
                             <td>Marketing</td>
                             <td>juan@eclipsemex.com</td>
-                            <td>Bueno</td>
+                            <td>
+                              <select id="diagnostico" name="diagnostico" class="selectpicker" data-style="select-with-transition" multiple title="Diagnostico" data-size="7">
+                              <option value="0">No</option>
+                              <option selected="true" value="1">Si</option>
+                            </select>
+                            </td>
                             <td>
                               <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                               <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
@@ -254,7 +263,12 @@
                             <td>0123456789</td>
                             <td>Ventas</td>
                             <td>carlos@cisco.com</td>
-                            <td>Malo</td>
+                            <td>
+                              <select id="diagnostico" name="diagnostico" class="selectpicker" data-style="select-with-transition" multiple title="Diagnostico" data-size="7">
+                              <option value="0">No</option>
+                              <option selected="true" value="1">Si</option>
+                            </select>
+                            </td>
                             <td>
                               <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                               <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
@@ -272,13 +286,60 @@
                             <td>0123456789</td>
                             <td>Operaciones</td>
                             <td>andres@ibm.com</td>
-                            <td>Regular</td>
+                            <td>
+                              <select id="diagnostico" name="diagnostico" class="selectpicker" data-style="select-with-transition" multiple title="Diagnostico" data-size="7">
+                              <option value="0">No</option>
+                              <option selected="true" value="1">Si</option>
+                            </select>
+                            </td>
                             <td>
                               <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                               <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
                             </td>
                           </tr>
 
+                        </tbody>
+                      </table>
+                    </div>-->
+
+
+                    <div class="material-datatables">
+                      <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th>Usuario</th>
+                            <th>Token</th>
+                            <th>Celular</th>
+                            <th>Puesto</th>
+                            <th>Correo</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr>
+                            <th>Usuario</th>
+                            <th>Token</th>
+                            <th>Celular</th>
+                            <th>Puesto</th>
+                            <th>Correo</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </tfoot>
+                        <tbody>
+                          <c:forEach var="usuario" items="${listaUsuarios}">
+                            <tr>
+                                <td>${usuario[0]}</td>  
+                                <td>${usuario[1]}</td>                                            
+                                <td>${usuario[2]}</td>  
+                                <td>${usuario[3]}</td>
+                                <td>${usuario[4]}</td>                                            
+                                <td>
+                                  <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
+                                  <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
+                                </td>
+                            </tr>
+                          </c:forEach>
+                          
                         </tbody>
                       </table>
                     </div>
@@ -456,6 +517,8 @@
             searchPlaceholder: "Buscar...",
           }
         });
+
+        console.log("lista:" + "${listaUsuarios}");
 
         $sidebar = $('.sidebar');
 

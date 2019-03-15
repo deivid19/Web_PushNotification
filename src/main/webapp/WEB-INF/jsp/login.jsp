@@ -112,7 +112,7 @@
                           <i class="material-icons">email</i>
                         </span>
                       </div>
-                      <input name="usuario" type="email" class="form-control" placeholder="Correo...">
+                      <input name="usuario" type="text" class="form-control" placeholder="Correo...">
                     </div>
                   </span>
                   <span class="bmd-form-group">

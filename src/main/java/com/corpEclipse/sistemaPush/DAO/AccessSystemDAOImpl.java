@@ -49,7 +49,8 @@ public class AccessSystemDAOImpl implements AccessSystemDAO {
             Criteria criteria = sessionFactory.getCurrentSession().createCriteria(Usuario.class);
             Criterion ct_user = Restrictions.eq("usuario", usuario);
             Criterion ct_pass = Restrictions.eq("password",pass);
-            Criterion ct_activo = Restrictions.eq("activo",true);
+            Criterion ct_activo = Restrictions.eq("isAct",true);
+            System.out.println("Usr: " + ct_user + " Pwd: " + ct_pass + " activo: " + ct_activo);
             Conjunction andExp = Restrictions.and(ct_user, ct_pass, ct_activo);
             criteria.add(andExp);
              user=(Usuario) criteria.uniqueResult();

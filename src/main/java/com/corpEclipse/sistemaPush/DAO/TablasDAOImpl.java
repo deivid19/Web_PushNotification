@@ -42,10 +42,12 @@ public class TablasDAOImpl implements TablasDAO{
     public List<Object[]> getListaUsuarios() {
         List<Object[]> lista = new ArrayList();
 
-        final String consulta = "SELECT id_participante,nombre_empresa,participante,celular,puesto,correo,diagnostico\n"
-                + "FROM\n"
-                + "cat_participante\n"
-                + "ORDER BY participante";
+        /*final String consulta = "SELECT id_participante,nombre_empresa,participante,celular,puesto,correo,diagnostico\n"
+                + "FROM cat_participantes\n"
+                + "ORDER BY participante";*/
+        final String consulta = "SELECT usuario, token, celular, puesto, correo\n"
+                + "FROM Usuarios\n";
+        System.out.println("Query: " + consulta);
         try {
             Session session = sessionFactory.getCurrentSession();
 

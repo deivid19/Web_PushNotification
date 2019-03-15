@@ -253,7 +253,12 @@
                           <td>0123456789</td>
                           <td>Marketing</td>
                           <td>juan@eclipsemex.com</td>
-                          <td>Bueno</td>
+                          <td>
+                            <select id="diagnostico" name="diagnostico" class="selectpicker" data-style="select-with-transition" multiple title="Diagnostico" data-size="7">
+                              <option value="0">No</option>
+                              <option selected="true" value="1">Si</option>
+                            </select>
+                          </td>
                           <td>
                             <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                             <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
@@ -271,7 +276,12 @@
                           <td>0123456789</td>
                           <td>Ventas</td>
                           <td>carlos@cisco.com</td>
-                          <td>Malo</td>
+                          <td>
+                            <select id="diagnostico" name="diagnostico" class="selectpicker" data-style="select-with-transition" multiple title="Diagnostico" data-size="7">
+                              <option value="0">No</option>
+                              <option selected="true" value="1">Si</option>
+                            </select>
+                          </td>
                           <td>
                             <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                             <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>
@@ -289,7 +299,12 @@
                           <td>0123456789</td>
                           <td>Operaciones</td>
                           <td>andres@ibm.com</td>
-                          <td>Regular</td>
+                          <td>
+                            <select id="diagnostico" name="diagnostico" class="selectpicker" data-style="select-with-transition" multiple title="Diagnostico" data-size="7">
+                              <option value="0">No</option>
+                              <option selected="true" value="1">Si</option>
+                            </select>
+                          </td>
                           <td>
                             <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                             <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>

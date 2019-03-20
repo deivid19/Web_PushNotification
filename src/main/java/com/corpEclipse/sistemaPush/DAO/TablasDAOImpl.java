@@ -45,8 +45,10 @@ public class TablasDAOImpl implements TablasDAO{
         /*final String consulta = "SELECT id_participante,nombre_empresa,participante,celular,puesto,correo,diagnostico\n"
                 + "FROM cat_participantes\n"
                 + "ORDER BY participante";*/
-        final String consulta = "SELECT usuario, token, celular, puesto, correo\n"
-                + "FROM Usuarios\n";
+        final String consulta = "SELECT id_usuario, usuario, id_tipo, celular, puesto, nombre_empresa, isDiagnostico\n" +
+                                "FROM Usuarios\n" +
+                                "WHERE isAct = 'TRUE'\n" +
+                                "ORDER BY id_usuario ASC;\n";
         System.out.println("Query: " + consulta);
         try {
             Session session = sessionFactory.getCurrentSession();
@@ -63,13 +65,13 @@ public class TablasDAOImpl implements TablasDAO{
     }
     
     @Override
-    public String insertarRegistro(String nombre, String celular, String puesto, String correo) {
+    public String insertarRegistro(String usuario, String password, String id_tipo, String celular, String puesto, String correo, String empresa, String diagnostico) {
         LOG.debug("insertarRegistro");
         String consulta = null;
 
         consulta = "INSERT INTO usuarios\n"
-                 + "(usuario,celular,puesto,correo)\n"
-                 + "VALUES('" + nombre + "'," + celular + ",'" + puesto + "','" + correo + "'" + ");";
+                 + "(usuario, password, id_tipo, celular, puesto, correo, nombre_empresa, isDiagnostico, isAct)\n"
+                 + "VALUES('" + usuario + "','" + password + "'," + id_tipo + ",'" + celular + "','" + puesto + "','" + correo + "','" + empresa + "','" + diagnostico + "', 'true'" + ");";
 
         System.out.println(" query: " + consulta);
 

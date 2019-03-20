@@ -102,6 +102,15 @@ public class TablasController extends AccessSystemController{
         _modelandview.setViewName("tablas/usuarios");
         _model = new HashMap<>();
         
+        try {
+                List<Object[]> list_usr = new ArrayList();
+                list_usr = tablasService.getListaUsuarios();
+                System.out.println("lista: " + list_usr);
+                _model.put("listaUsuarios", list_usr);
+            } catch (Exception e) {
+                LOG.error("Algo fue mal con el servicio getListaUsuarios" + e);
+            }
+        
         _modelandview.addAllObjects(_model);
 
         return _modelandview;
@@ -109,21 +118,25 @@ public class TablasController extends AccessSystemController{
     
     @RequestMapping(value = {"/nuevoRegistro"}, method = {org.springframework.web.bind.annotation.RequestMethod.GET, org.springframework.web.bind.annotation.RequestMethod.POST})
     public String nuevoRegistro(HttpServletRequest request) {
-        String nombre = request.getParameter("nombre");
+        String usuario = request.getParameter("usuario");
+        String password = request.getParameter("password");
+        String tipo = request.getParameter("tipo");
         String celular = request.getParameter("celular");
         String puesto = request.getParameter("puesto");
         String correo = request.getParameter("correo");
+        String empresa = request.getParameter("empresa");
+        String diagnostico = request.getParameter("diagnostico");
 
         String consulta = null;
         String _urlsalida = null;
         try {
-            consulta = tablasService.insertarRegistro(nombre, celular, puesto, correo);
+            consulta = tablasService.insertarRegistro(usuario, password, tipo, celular, puesto, correo, empresa, diagnostico);
         } catch (Exception e) {
             LOG.error("Algo fue mal con insertarRegistro " + e);
         }
         if (consulta.equals("1")) {
 
-            _urlsalida = "redirect:/tablas/usuarios";
+            _urlsalida = "redirect:/tablas/visualizar";
         }
 
         System.out.println("consulta: " + consulta);

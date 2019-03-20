@@ -17,6 +17,6 @@ public interface TablasService {
     public  List<Object[]>  getListaUsuarios();
     
     //insertar nuevo registro
-    public  String  insertarRegistro(String nombre, String celular, String puesto, String correo);
+    public  String  insertarRegistro(String usuario, String password, String id_tipo, String celular, String puesto, String correo, String empresa, String diagnostico);
     
 }

@@ -288,7 +288,7 @@
                     <div class="row">
                       <div class="col-sm-5">
                         <div class="form-group">
-                          <textarea class="form-control" id="valTexto" name="valTexto" placeholder="Texto" rows="4"></textarea>
+                          <textarea class="form-control" id="valInd" name="valInd" placeholder="Texto" rows="4"></textarea>
                         </div>
                       </div>
                       <!--<label class="col-sm-2 col-form-label">Individual</label>
@@ -471,7 +471,9 @@
           for (var i=0; i < oData.length ;i++){
             /*alert("Nombre: " + oData[i][1] + " Celular: " + oData[i][2] + " Puesto: " + oData[i][3]) + "Correo: " + oData[i][4];*/
             var id = oData[i][1];
-            console.log("id: " + id);
+            var individual = document.getElementById('valInd').value;
+            var datosInd = JSON.stringify({ idusr: id, url: '0', mensaje: individual });
+            console.log("numPush: " + datosInd);
             /*var datosGrupo = JSON.stringify({ Nombre: Nombre, Celular: Celular, Puesto: Puesto, Correo: Correo });
             console.log(datosGrupo);*/
           }

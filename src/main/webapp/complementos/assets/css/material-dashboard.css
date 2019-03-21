@@ -24370,7 +24370,7 @@ table.dataTable tbody th.select-checkbox:before {
 table.dataTable tr.selected td.select-checkbox:after,
 table.dataTable tr.selected th.select-checkbox:after {
   content: '\2714';
-  margin-top: -11px;
+  margin-top: -3px;
   margin-left: -4px;
   text-align: center;
   text-shadow: 1px 1px #B0BED9, -1px -1px #B0BED9, 1px -1px #B0BED9, -1px 1px #B0BED9;

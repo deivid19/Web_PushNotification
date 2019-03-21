@@ -22,11 +22,15 @@ public class AccessSystemServiceImpl implements AccessSystemService{
     @Autowired
     private AccessSystemDAO _accessystemdao;
 
-
     @Override
+    public List<Object[]> getCredenciales(String usuario, String pass) {
+        return _accessystemdao.getCredenciales(usuario, pass);
+    }
+    
+    /*@Override
     public Usuario validaAcceso(String user, String password) {
         return _accessystemdao.validaAcceso(user, password);
-    }
+    }*/
 
     @Override
     public Usuario obtenerUsuario(String id) {

@@ -5,6 +5,7 @@
  */
 package com.corpEclipse.sistemaPush.DAO;
 
+import com.corpEclipse.sistemaPush.Utils.Seguridad;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Resource;
@@ -68,6 +69,9 @@ public class TablasDAOImpl implements TablasDAO{
     public String insertarRegistro(String usuario, String password, String id_tipo, String celular, String puesto, String correo, String empresa, String diagnostico) {
         LOG.debug("insertarRegistro");
         String consulta = null;
+        
+        password=Seguridad.encripta(password);
+        System.out.println("pass "+ password);
 
         consulta = "INSERT INTO usuarios\n"
                  + "(usuario, password, id_tipo, celular, puesto, correo, nombre_empresa, isDiagnostico, isAct)\n"

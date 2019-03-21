@@ -12,11 +12,15 @@ import javax.annotation.PreDestroy;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -66,14 +70,40 @@ public class AccessSystemController implements Serializable {
 
     }
 
-    // Redireccionar a login_usuario
     @RequestMapping(value = "/validaruser", method = RequestMethod.POST)
+    //@ResponseBody
+    public String validarUsuario(HttpServletRequest request) {
+
+        List<Object[]> respuesta = null;
+        boolean actualizo = false;
+
+        String usuario = request.getParameter("usuario");
+        String password = request.getParameter("password");
+
+        String _urlsalida = "";
+
+        //System.out.println("pass: " + password + " usuario: " + usuario);
+        respuesta = _accessystemservice.getCredenciales(usuario, password);
+        //int r=Integer.parseInt(respuesta);
+
+        if (respuesta != null) {
+            _urlsalida = "redirect:/tablas/usuarios";
+        } else {
+            _urlsalida = "redirect:/errorlogin";
+        }
+
+        return _urlsalida;
+
+    }
+
+    // Redireccionar a login_usuario
+    /*@RequestMapping(value = "/validaruser", method = RequestMethod.POST)
     // <editor-fold defaultstate="collapsed" desc="vista login">
     public String redirige(HttpServletRequest request) {
 
         System.out.println("Peticion: /validaruser");
 
-        /*servicio de validacion*/
+        /servicio de validacion/
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
         _model = new HashMap<>();
@@ -82,24 +112,10 @@ public class AccessSystemController implements Serializable {
         System.out.println("password: " + password);
 
         String _urlsalida = "";
-
-        /*if (usuario == null || usuario.equals("") || password.equals("")) {
-
-            _urlsalida = "redirect:/errorlogin";
-
-        } else {
-            if (usuario.equals("luis.cabrera@eclipsemex.com") && password.equals("luis")) {
-                _urlsalida = "redirect:/tablas/visualizar";
-            } else {
-                _urlsalida = "redirect:/errorlogin";
-            }
-
-        }*/
         
         if (usuario == null || usuario.equals("") || password.equals("")) {
 
-            //_urlsalida = "redirect:errorlogin.jsp";
-                _urlsalida = "redirect:/errorlogin";
+            _urlsalida = "redirect:/errorlogin";
             
         }
 
@@ -111,7 +127,7 @@ public class AccessSystemController implements Serializable {
 
                 request.getSession().setAttribute("usuario", user.getUsuario());
                 
-                request.getSession().setAttribute("idusr", user.getId_usuario());
+                //request.getSession().setAttribute("idusr", user.getId_usuario());
                 _urlsalida = "redirect:/tablas/visualizar";
                 
             }
@@ -123,8 +139,7 @@ public class AccessSystemController implements Serializable {
             
         }
         return _urlsalida;
-    }
-
+    }*/
     @RequestMapping(value = "/registro", method = RequestMethod.GET)
     public ModelAndView registro(HttpServletRequest request) {
         _modelandview = new ModelAndView();

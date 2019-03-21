@@ -88,16 +88,16 @@
             </a>
             <div class="collapse show" id="tablesExamples">
               <ul class="nav">
-                <li class="nav-item active ">
-                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/visualizar">
-                    <i class="material-icons">visibility</i>
-                    <span class="sidebar-normal"> Visualizar </span>
-                  </a>
-                </li>
                 <li class="nav-item ">
                   <a class="nav-link" href="${pageContext.request.contextPath}/tablas/usuarios">
                     <i class="material-icons">face</i>
                     <span class="sidebar-normal"> Usuarios </span>
+                  </a>
+                </li>
+                <li class="nav-item active ">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/visualizar">
+                    <i class="material-icons">visibility</i>
+                    <span class="sidebar-normal"> Visualizar </span>
                   </a>
                 </li>
                 <li class="nav-item ">

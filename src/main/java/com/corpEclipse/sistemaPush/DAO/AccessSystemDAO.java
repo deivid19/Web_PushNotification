@@ -16,6 +16,7 @@ import java.util.List;
  * @author luistoxd
  */
 public interface AccessSystemDAO {
-    public Usuario validaAcceso(String user, String password);
+    public List<Object[]> getCredenciales(String usuario, String pass);
+    //public Usuario validaAcceso(String user, String password);
     public Usuario obtenerUsuario(String id);
 }

@@ -88,16 +88,16 @@
             </a>
             <div class="collapse show" id="tablesExamples">
               <ul class="nav">
-                <li class="nav-item ">
-                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/visualizar">
-                    <i class="material-icons">visibility</i>
-                    <span class="sidebar-normal"> Visualizar </span>
-                  </a>
-                </li>
                 <li class="nav-item active ">
                   <a class="nav-link" href="${pageContext.request.contextPath}/tablas/usuarios">
                     <i class="material-icons">face</i>
                     <span class="sidebar-normal"> Usuarios </span>
+                  </a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="${pageContext.request.contextPath}/tablas/visualizar">
+                    <i class="material-icons">visibility</i>
+                    <span class="sidebar-normal"> Visualizar </span>
                   </a>
                 </li>
                 <li class="nav-item ">
@@ -220,23 +220,27 @@
                     <table id="datatables" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                         <thead>
                           <tr>
-                            <th></th>
-                            <th>id</th>
+                            <th>Marcar</th>
+                            <th>Id Usuario</th>
                             <th>Usuario</th>
+                            <th>Tipo</th>
                             <th>Celular</th>
                             <th>Puesto</th>
-                            <th>Correo</th>
+                            <th>Empresa</th>
+                            <th>Diagnóstico</th>
                             <th>Acciones</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
-                            <th></th>
-                            <th>id</th>
+                            <th>Marcar</th>
+                            <th>Id Usuario</th>
                             <th>Usuario</th>
+                            <th>Tipo</th>
                             <th>Celular</th>
                             <th>Puesto</th>
-                            <th>Correo</th>
+                            <th>Empresa</th>
+                            <th>Diagnóstico</th>
                             <th>Acciones</th>
                           </tr>
                         </tfoot>
@@ -248,7 +252,9 @@
                               <td>${usuario[1]}</td>                                          
                               <td>${usuario[2]}</td>  
                               <td>${usuario[3]}</td>
-                              <td>${usuario[4]}</td>                                          
+                              <td>${usuario[4]}</td>
+                              <td>${usuario[5]}</td>
+                              <td>${usuario[6]}</td>
                               <td>
                                 <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
                                 <a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>

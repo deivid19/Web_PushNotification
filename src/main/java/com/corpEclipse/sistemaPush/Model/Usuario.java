@@ -19,55 +19,63 @@ public class Usuario {
     @Column(name="id_usuario")
     private int id_usuario;
     
-    @Column(name="nombre")
-    private String nombre;
-    
-    @Column(name="appaternor")
-    private String ap_pat;
-    
-    @Column(name="apmaterno")
-    private String ap_mat;
-    
-    @Column(name="foto")
-    private String foto;
-    
-    @Column(name="id_perfil")
-    private int id_perfil;
-    
-    @Column(name="activo")
-    private boolean activo;
+    @Column(name="usuario")
+    private String usuario;
+
+    @Column(name="password")
+    private String password;
     
     @Column(name="isAct")
     private boolean isAct;
     
-    @Column(name="usuario")
-    private String usuario;
+    @Column(name="id_tipo")
+    private int id_tipo;
     
-    @Column(name="password")
-    private String password;
+    @Column(name="token")
+    private String token;
+    
+    @Column(name="id_tipo_os")
+    private int id_tipo_os;
+    
+    @Column(name="isPush")
+    private boolean isPush;
+    
+    @Column(name="celular")
+    private int celular;
+    
+    @Column(name="puesto")
+    private String puesto;
+    
+    @Column(name="correo")
+    private String correo;
+    
+    @Column(name="isDiagnostico")
+    private boolean isDiagnostico;
+    
+    @Column(name="nombreEmpresa")
+    private String nombreEmpresa;
+    
 
     public Usuario() {
     }
 
-    /*public Usuario(int id_usuario, String nombre, String ap_pat, String ap_mat, String foto, int id_perfil, boolean activo, String usuario, String password) {
+    public Usuario(int id_usuario, String usuario, String password, boolean isAct, int id_tipo, String token, int id_tipo_os, boolean isPush, int celular, String puesto, String correo, boolean isDiagnostico, String nombreEmpresa) {
         this.id_usuario = id_usuario;
-        this.nombre = nombre;
-        this.ap_pat = ap_pat;
-        this.ap_mat = ap_mat;
-        this.foto = foto;
-        this.id_perfil = id_perfil;
-        this.activo = activo;
         this.usuario = usuario;
         this.password = password;
-    }*/
-    
-    public Usuario(int id_usuario, String usuario, boolean isAct, String password) {
-        this.id_usuario = id_usuario;
-        this.usuario = usuario;
         this.isAct = isAct;
-        this.password = password;
+        this.id_tipo = id_tipo;
+        this.token = token;
+        this.id_tipo_os = id_tipo_os;
+        this.isPush = isPush;
+        this.celular = celular;
+        this.puesto = puesto;
+        this.correo = correo;
+        this.isDiagnostico = isDiagnostico;
+        this.nombreEmpresa = nombreEmpresa;
     }
     
+
 
     public int getId_usuario() {
         return id_usuario;
@@ -76,63 +84,7 @@ public class Usuario {
     public void setId_usuario(int id_usuario) {
         this.id_usuario = id_usuario;
     }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getAp_pat() {
-        return ap_pat;
-    }
-
-    public void setAp_pat(String ap_pat) {
-        this.ap_pat = ap_pat;
-    }
-
-    public String getAp_mat() {
-        return ap_mat;
-    }
-
-    public void setAp_mat(String ap_mat) {
-        this.ap_mat = ap_mat;
-    }
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public int getId_perfil() {
-        return id_perfil;
-    }
-
-    public void setId_perfil(int id_perfil) {
-        this.id_perfil = id_perfil;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
     
-    public boolean isAct() {
-        return isAct;
-    }
-
-    public void setAct(boolean isAct) {
-        this.isAct = isAct;
-    }
-
     public String getUsuario() {
         return usuario;
     }
@@ -149,7 +101,84 @@ public class Usuario {
         this.password = password;
     }
     
+    public boolean isAct() {
+        return isAct;
+    }
+
+    public void setAct(boolean isAct) {
+        this.isAct = isAct;
+    }
+
+    public int getId_tipo() {
+        return id_tipo;
+    }
+
+    public void setId_tipo(int id_tipo) {
+        this.id_tipo = id_tipo;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public int getId_tipo_os() {
+        return id_tipo_os;
+    }
+
+    public void setId_tipo_os(int id_tipo_os) {
+        this.id_tipo_os = id_tipo_os;
+    }
+
+    public boolean getIsPush() {
+        return isPush;
+    }
+
+    public void setIsPush(boolean isPush) {
+        this.isPush = isPush;
+    }
+
+    public int getCelular() {
+        return celular;
+    }
     
+    public void setCelular(int celular) {
+        this.celular = celular;
+    }
+
+    public String getPuesto() {
+        return puesto;
+    }
     
+    public void setPuesto(String puesto) {
+        this.puesto = puesto;
+    }
+    
+    public String getCorreo() {
+        return correo;
+    }
+    
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    
+    public boolean getIsDiagnostico() {
+        return isDiagnostico;
+    }
+    
+    public void setIsDiagnostico(boolean isDiagnostico) {
+        this.isDiagnostico = isDiagnostico;
+    }
+    
+    public String getNombreEmpresa() {
+        return nombreEmpresa;
+    }
+    
+    public void setNombreEmpresa(String nombreEmpresa) {
+        this.nombreEmpresa = nombreEmpresa;
+    }
     
 }

@@ -52,10 +52,14 @@
             <h1 class="title">404</h1>
             <h2>Página no encontrada :(</h2>
             <h4>Ooooups! Looks like you got lost.</h4>
+            <a style="font-size: 20px" href="${pageContext.request.contextPath}/login" class="btn btn-rose btn-link btn-lg">Regresar</a>
           </div>
-        <div class="card-footer justify-content-center">
-          <a href="${pageContext.request.contextPath}/login" class="btn btn-danger btn-link btn-lg">Regresar</a>
-        </div>
+
+          <!--<div class="card card-login card-hidden">
+            <div class="card-footer justify-content-center">-->
+              
+            <!--</div>
+          </div>-->
         </div>
       </div>
       <footer class="footer">

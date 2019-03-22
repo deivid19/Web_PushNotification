@@ -236,9 +236,9 @@
                               <td>${usuario[6]}</td>
                               <td>
 
-                                <button href="#" class="btn btn-link btn-info btn-just-icon edit" onclick="cambiarDiagnostico(1, ${usuario[0]});"><i class="material-icons">done</i>
+                                <button href="#" class="btn btn-link btn-info btn-just-icon edit" onclick="cambiarDiagnostico('1', '${usuario[0]}');"><i class="material-icons">done</i>
                                 </button>
-                                <button href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="cambiarDiagnostico(0, ${usuario[0]});"><i class="material-icons">highlight_off</i>
+                                <button href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="cambiarDiagnostico('0', '${usuario[0]}');"><i class="material-icons">highlight_off</i>
                                 </button>
 
                                 <!--<a href="#" class="btn btn-link btn-danger btn-just-icon remove" onclick="demo.showSwal('warning-message-and-confirmation')"><i class="material-icons">highlight_off</i></a>-->
@@ -640,26 +640,25 @@
   <script>
 
     function cambiarDiagnostico(diag, id){
-      //console.log("diag: " + diag + " id: " + id);
-      var diagnostico, idUser = "";
-      diagnostico = diag.toString();
-      idUser = id.toString();
-      console.log("diag: " + diagnostico + " id: " + idUser);
+      
+      var data = {
+        diag: diag,
+        id: id
+      };
 
+      console.log(JSON.stringify(data));
       $.ajax({
         type: "POST",
         url: "cambiaDiagnostico",
-        data: {
-          diag: diagnostico, 
-          id: idUser
-        },
+        data: JSON.stringify(data),
+        dataType: "json",
+        contentType : "application/json",
         async:false,
         success: function(msg) {
-                  alert('Diagnostico actualizado.');
-                },
-        dataType: "json",
-        contentType : "application/json"
+        }
+
       });
+      window.location.href = "${pageContext.request.contextPath}/tablas/base_de_datos";
 
     }
 

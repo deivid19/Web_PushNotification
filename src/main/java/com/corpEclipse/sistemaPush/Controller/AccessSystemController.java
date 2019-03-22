@@ -87,7 +87,7 @@ public class AccessSystemController implements Serializable {
         //int r=Integer.parseInt(respuesta);
 
         if (respuesta != null) {
-            _urlsalida = "redirect:/tablas/usuarios";
+            _urlsalida = "redirect:/tablas/push_notifications";
         } else {
             _urlsalida = "redirect:/errorlogin";
         }

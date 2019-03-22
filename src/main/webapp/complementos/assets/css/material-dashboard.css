@@ -9057,7 +9057,7 @@ a.text-dark:focus {
 
 .btn.btn-info.btn-link {
   background-color: transparent;
-  color: #00bcd4;
+  color: #00d42e;
   box-shadow: none;
 }
 
@@ -24361,8 +24361,8 @@ table.dataTable tbody th.select-checkbox:after {
 table.dataTable tbody td.select-checkbox:before,
 table.dataTable tbody th.select-checkbox:before {
   content: ' ';
-  margin-top: 6px;
-  margin-left: -6px;
+  /*margin-top: 6px;*/
+  margin-left: -15px;
   border: 1px solid black;
   border-radius: 3px;
 }
@@ -24370,8 +24370,8 @@ table.dataTable tbody th.select-checkbox:before {
 table.dataTable tr.selected td.select-checkbox:after,
 table.dataTable tr.selected th.select-checkbox:after {
   content: '\2714';
-  margin-top: -3px;
-  margin-left: -4px;
+  margin-top: -8px;
+  margin-left: -13px;
   text-align: center;
   text-shadow: 1px 1px #B0BED9, -1px -1px #B0BED9, 1px -1px #B0BED9, -1px 1px #B0BED9;
 }

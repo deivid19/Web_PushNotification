@@ -30,4 +30,9 @@ public class TablasServiceImpl implements TablasService{
         return tablasDao.insertarRegistro(usuario, password, id_tipo, celular, puesto, correo, empresa, diagnostico);
     }
     
+    @Override
+    public String cambiarDiagnostico(String diagnostico, String id) {
+        return tablasDao.cambiarDiagnostico(diagnostico, id);
+    }
+    
 }

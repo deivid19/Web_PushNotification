@@ -73,7 +73,7 @@ public class TablasDAOImpl implements TablasDAO{
         password=Seguridad.encripta(password);
         System.out.println("pass "+ password);
 
-        consulta = "INSERT INTO usuarios\n"
+        consulta = "INSERT INTO Usuarios\n"
                  + "(usuario, password, id_tipo, celular, puesto, correo, nombre_empresa, isDiagnostico, isAct)\n"
                  + "VALUES('" + usuario + "','" + password + "'," + id_tipo + ",'" + celular + "','" + puesto + "','" + correo + "','" + empresa + "','" + diagnostico + "', 'true'" + ");";
 
@@ -87,6 +87,31 @@ public class TablasDAOImpl implements TablasDAO{
             respuesta = "1";
         } catch (HibernateException e) {
             LOG.error("Error en insertarRegistro: " + e.getMessage(), e);
+            respuesta = "0";
+        }
+
+        return respuesta;
+    }
+    
+    @Override
+    public String cambiarDiagnostico(String diagnostico, String id) {
+        LOG.debug("cambiarDiagnostico");
+        String consulta = null;
+
+        consulta = "UPDATE Usuarios\n"
+                 + "SET isDiagnostico = '" + diagnostico + "'\n"
+                 + "WHERE id_usuario = " + id + ";";
+
+        System.out.println(" query: " + consulta);
+
+        String respuesta = "";
+        try {
+            Session session = sessionFactory.getCurrentSession();
+            Query query = session.createSQLQuery(consulta);
+            query.executeUpdate();
+            respuesta = "1";
+        } catch (HibernateException e) {
+            LOG.error("Error en cambiarDiagnostico: " + e.getMessage(), e);
             respuesta = "0";
         }
 

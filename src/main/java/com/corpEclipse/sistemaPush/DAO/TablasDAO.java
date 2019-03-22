@@ -19,4 +19,7 @@ public interface TablasDAO {
     // Agregar nuevo concepto
     public  String  insertarRegistro(String usuario, String password, String id_tipo, String celular, String puesto, String correo, String empresa, String diagnostico);
     
+    //actualizar diagnostico
+    public  String  cambiarDiagnostico(String diagnostico, String id);
+    
 }

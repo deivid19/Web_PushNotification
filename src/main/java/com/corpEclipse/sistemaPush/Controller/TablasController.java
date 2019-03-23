@@ -131,6 +131,10 @@ public class TablasController extends AccessSystemController{
         String empresa = request.getParameter("empresa");
         String diagnostico = request.getParameter("diagnostico");
         
+        /*if (celular == ""){
+            celular = "0";
+        }*/
+        
         System.out.println("Registro: " + usuario + password + tipo + celular + puesto + correo + empresa + diagnostico);
 
         String consulta = null;

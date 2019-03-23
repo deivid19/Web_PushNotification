@@ -269,7 +269,8 @@
                   </div>
                 </div>
                 <div class="card-body ">
-                  <form method="POST" action="nuevoRegistro">
+                  <!-- <form method="POST" action="nuevoRegistro"> -->
+                    <form>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -322,7 +323,7 @@
                     </div>
 
                     <div class="card-footer ">
-                      <button type="submit" class="btn btn-fill btn-rose">Registrar</button>
+                      <button type="button" onclick="enviarRegistro();" class="btn btn-fill btn-rose">Registrar</button>
                     </div>
                     
                   </form>
@@ -615,6 +616,45 @@
   </script>
 
   <script>
+
+    function enviarRegistro(){
+            var usuario=document.getElementById('usuario').value;
+            var password=document.getElementById('password').value;
+            var tipo=document.getElementById('tipo').value;
+            var celular=document.getElementById('celular').value;
+            var puesto=document.getElementById('puesto').value;
+            var correo=document.getElementById('correo').value;
+            var empresa=document.getElementById('empresa').value;
+            var diagnostico=document.getElementById('diagnostico').value;
+            
+            if (celular == "") {
+              celular = "0";
+            }
+
+            if (usuario == "" || password == "" || correo == "" || empresa == "") {
+                alert("Llena los campos obligatorios");
+            }else{
+                $.ajax({
+                    url: 'nuevoRegistro',
+                    type: 'POST',
+                    data: {
+                        usuario: usuario,
+                        password: password,
+                        tipo: tipo,
+                        celular: celular,
+                        puesto: puesto,
+                        correo: correo,
+                        empresa: empresa,
+                        diagnostico: diagnostico
+                    },
+                    async:false,
+                    success: function(msg) {
+                      alert('Registro enviado.');
+                    }
+                });
+                window.location.href = "${pageContext.request.contextPath}/tablas/base_de_datos";
+            }
+        }
 
     function cambiarDiagnostico(diag, id){
       

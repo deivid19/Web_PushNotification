@@ -198,6 +198,8 @@
                             <th>Celular</th>
                             <th>Puesto</th>
                             <th>Empresa</th>
+                            <th>Tipo OS</th>
+                            <th>Token</th>
                             <!--<th>Diagnóstico</th>
                             <th>Acciones</th>-->
                           </tr>
@@ -211,6 +213,8 @@
                             <th>Celular</th>
                             <th>Puesto</th>
                             <th>Empresa</th>
+                            <th>Tipo OS</th>
+                            <th>Token</th>
                             <!--<th>Diagnóstico</th>
                             <th>Acciones</th>-->
                           </tr>
@@ -225,6 +229,8 @@
                               <td>${usuario[3]}</td>
                               <td>${usuario[4]}</td>
                               <td>${usuario[5]}</td>
+                              <td>${usuario[7]}</td>
+                              <td>${usuario[8]}</td>
                               <!--<td>${usuario[6]}</td>
                               <td>
                                 <a href="modificar.html" class="btn btn-link btn-info btn-just-icon edit"><i class="material-icons">input</i></a>
@@ -426,7 +432,7 @@
           className: 'select-checkbox',
           targets: 0
           }, {
-            "targets": [1],
+            "targets": [1, 7, 8],
             "visible": false,
             "searchable": false
           }],
@@ -441,32 +447,52 @@
         $('#btnSelectedRows').on('click', function() {
           var oData = table.rows('.selected').data();
           var datosInd = "";
-          var idArray = [];
+
+          //Arrays inicializados
+          /*var idArray = [];
+          var tipoArray = [];
+          var tokenArray = [];*/
+          
           for (var i=0; i < oData.length ;i++){
 
             var id = oData[i][1];
+            var tipo = oData[i][7];
+            var token = oData[i][8];
             var individual = document.getElementById('valInd').value;
-            idArray.push({idusr: id});
+            
+            //Asignacion de valores a los Arrays
+            /*idArray.push({idusr: id});
+            tipoArray.push({tipoOS: tipo});
+            tokenArray.push({getToken: token});*/
+            
             datosInd = {
               "numPush": 
-                idArray, "isURL": "0", "mensaje": individual
+                //idArray, "isURL": "0", "mensaje": individual, tipoArray, tokenArray
+                {"idusr": id}, "isURL": "0", "mensaje": individual, "tipoOS": tipo, "getToken": token
             }
-          }
-          console.log("array: " + JSON.stringify(datosInd));
 
-          $.ajax({
-            type: "POST",
-            url: "http://18.217.147.215:8080/CEOSWS/servicios/notLista",
-            data: JSON.stringify(datosInd),
-            dataType: "json",
-            contentType : "application/json",
-            async:false,
-            success: function(msg) {
+            $.ajax({
+              type: "POST",
+              url: "http://18.217.147.215:8080/CEOSWS/servicios/notLista",
+              data: JSON.stringify(datosInd),
+              dataType: "json",
+              contentType : "application/json",
+              async:false,
+              success: function(msg) {
+              }
+            });
+
+            /*if (tipo == 1) {
+              console.log("iOS" + JSON.stringify(datosInd));
             }
-          });
+            else
+            if (tipo == 2) {
+              console.log("Android" + JSON.stringify(datosInd));
+            }*/
+            
+          }
 
         })
-
 
 
 

@@ -46,7 +46,7 @@ public class TablasDAOImpl implements TablasDAO{
         /*final String consulta = "SELECT id_participante,nombre_empresa,participante,celular,puesto,correo,diagnostico\n"
                 + "FROM cat_participantes\n"
                 + "ORDER BY participante";*/
-        final String consulta = "SELECT id_usuario, usuario, id_tipo, celular, puesto, nombre_empresa, isDiagnostico\n" +
+        final String consulta = "SELECT id_usuario, usuario, id_tipo, celular, puesto, nombre_empresa, isDiagnostico, id_tipo_os, token\n" +
                                 "FROM Usuarios\n" +
                                 "WHERE isAct = 'TRUE'\n" +
                                 "ORDER BY id_usuario ASC;\n";
